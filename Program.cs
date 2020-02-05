@@ -11,6 +11,9 @@ namespace ConsoleApp8
 
             string posicao = frase.Substring(3,10);
             Console.WriteLine(posicao);
+
+
+            Console.WriteLine(frase2);
         }
     }
 }
