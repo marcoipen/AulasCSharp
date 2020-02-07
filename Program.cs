@@ -1,4 +1,6 @@
 ﻿using System;
+using ConsoleApp8.Entidades;
+using ConsoleApp8.Entidades.Enums;
 
 namespace ConsoleApp8
 {
@@ -6,14 +8,17 @@ namespace ConsoleApp8
     {
         static void Main(string[] args)
         {
-            string frase = "esta é uma frase!";
-            string frase2 = "esta é uma frase!";
-
-            string posicao = frase.Substring(3,10);
-            Console.WriteLine(posicao);
+            Pedido pedido1 = new Pedido { Id = 1, Momento = DateTime.Now, Status = StatusPedido.Enviado };
+            Console.WriteLine(pedido1);
 
 
-            Console.WriteLine(frase2);
+            string texto = StatusPedido.PagamentoPendente.ToString();
+
+            Console.WriteLine(StatusPedido.Processando);
+
+            StatusPedido pedido2 = Enum.Parse<StatusPedido>("PagamentoPendente");
+
+            Console.WriteLine(pedido2);
         }
     }
 }
